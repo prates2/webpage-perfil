@@ -8,6 +8,11 @@ main{
     
 }
 
+h1{
+    color: rgb(0, 204, 255);
+    font-size: 300%;
+}
+
 section{
     width: 25%;
     padding-left: 5%;
@@ -19,6 +24,23 @@ ul{
     list-style-type: none;
 }
 
+button {
+    background-color: transparent;
+    color: #000000;
+    border: 0.125rem solid #ee8f00;
+    border-radius: 1.5rem;
+    padding: 0.625rem 1.25rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #ee8f00;
+    color: white;
+}
+
 #perfilimg{
     width: 50%;
     border-radius: 50%;
@@ -26,7 +48,6 @@ ul{
 
 #perfilsection{
     text-align: center;
-   
 }
 
 .icons{
@@ -42,3 +63,32 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+@media (max-width: 768px) {
+    main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+    section{
+        width: 75%;
+        text-align: center;
+    }
+    footer {
+        margin-top: 2rem;
+        position: relative;
+        width: 75%;
+    }
+    .icons{
+        width: 10%;
+    }
+    #perfilimg{
+        width: 75%;
+        border-radius: 50%;
+    }
+}
+
