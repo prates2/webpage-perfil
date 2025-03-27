@@ -1,0 +1,44 @@
+header{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+section{
+    width: 25%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+
+#perfilimg{
+    width: 50%;
+    border-radius: 50%;
+}
+
+#perfilsection{
+    text-align: center;
+   
+}
+
+.icons{
+    width: 7%;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 3rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
