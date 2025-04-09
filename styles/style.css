@@ -1,5 +1,29 @@
+:root {
+    --color-titulo: rgb(0, 204, 255);
+    --color-text: #000000;
+    --color-bg: #ffffff;
+    --color-footer-bg: #333;
+    --color-footer-text: #ffffff;
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+body.dark-mode {
+    --color-bg: #121212;
+    --color-text: #f0f0f0;
+    --color-footer-bg: #222;
+    --color-footer-text: #e0e0e0;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: clamp(1rem, 0.857rem + 0.381vw, 1.2rem);
+}
+
 header{
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 main{
@@ -8,15 +32,20 @@ main{
     
 }
 
+header, main, footer{
+    font-family: var(--font-family);
+}
+
 h1{
-    color: rgb(0, 204, 255);
-    font-size: 300%;
+    color: var(--color-titulo);
+    /*font-size: 400%;*/
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 
 section{
     width: 25%;
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 7%;
+    padding-right: 7%;
     
 }
 
@@ -26,7 +55,7 @@ ul{
 
 button {
     background-color: transparent;
-    color: #000000;
+    color: var(--color-text);
     border: 0.125rem solid #ee8f00;
     border-radius: 1.5rem;
     padding: 0.625rem 1.25rem;
@@ -37,17 +66,23 @@ button {
 }
 
 button:hover {
-    background-color: #ee8f00;
+    background-color: #c98834;
     color: white;
 }
 
 #perfilimg{
-    width: 50%;
+    width: 70%;
     border-radius: 50%;
+}
+
+#titulocard{
+    padding-top: 7rem;
 }
 
 #perfilsection{
     text-align: center;
+    /*background-color: #ff7b00;
+    color: white;*/
 }
 
 .icons{
@@ -55,13 +90,13 @@ button:hover {
 }
 
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
     text-align: center;
     padding: 3rem;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    width: 94%;
 }
 
 @media (max-width: 768px) {
@@ -74,14 +109,17 @@ footer {
         padding: 0;
         width: 100%;
     }
+    #mudarTema{
+        margin-top: 0.5rem;
+    }
     section{
         width: 75%;
         text-align: center;
+        margin-bottom: 2rem;
     }
     footer {
-        margin-top: 2rem;
         position: relative;
-        width: 75%;
+        width: 83%;
     }
     .icons{
         width: 10%;
